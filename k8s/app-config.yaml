@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: shopmicro
+data:
+  POSTGRES_DB: shopmicro
+  POSTGRES_USER: postgres
+  POSTGRES_HOST: postgres
+  REDIS_HOST: redis
+

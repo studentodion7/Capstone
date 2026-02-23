@@ -1,0 +1,51 @@
+{
+    "nodegroup": {
+        "nodegroupName": "shopmicro-dev-node-group-2",
+        "nodegroupArn": "arn:aws:eks:us-west-2:307946680662:nodegroup/shopmicro-dev/shopmicro-dev-node-group-2/56ce38c2-2dca-e124-b978-b8cadaec3acb",
+        "clusterName": "shopmicro-dev",
+        "version": "1.34",
+        "releaseVersion": "1.34.3-20260209",
+        "createdAt": "2026-02-18T17:10:27.604000+01:00",
+        "modifiedAt": "2026-02-19T13:17:20.886000+01:00",
+        "status": "DELETING",
+        "capacityType": "ON_DEMAND",
+        "scalingConfig": {
+            "minSize": 1,
+            "maxSize": 3,
+            "desiredSize": 2
+        },
+        "instanceTypes": [
+            "t3.medium"
+        ],
+        "subnets": [
+            "subnet-0822a2f5857941064",
+            "subnet-003d86e748e341910"
+        ],
+        "amiType": "AL2023_x86_64_STANDARD",
+        "nodeRole": "arn:aws:iam::307946680662:role/EKSNodeGroupRole",
+        "resources": {
+            "autoScalingGroups": [
+                {
+                    "name": "eks-shopmicro-dev-node-group-2-56ce38c2-2dca-e124-b978-b8cadaec3acb"
+                }
+            ]
+        },
+        "diskSize": 20,
+        "health": {
+            "issues": [
+                {
+                    "code": "NodeCreationFailure",
+                    "message": "Unhealthy nodes in the kubernetes cluster",
+                    "resourceIds": [
+                        "i-0dbdb583a263f8be6",
+                        "i-0cb56032d47013eed"
+                    ]
+                }
+            ]
+        },
+        "updateConfig": {
+            "maxUnavailable": 1
+        },
+        "tags": {}
+    }
+}

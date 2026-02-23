@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    environment:
+      POSTGRES_DB: shopmicro
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+  backend:
+    build: ./backend
+    container_name: backend
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: shopmicro
+      REDIS_HOST: redis
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - "8080:8080"
+
+  ml-service:
+    build: ./ml-service
+    container_name: ml-service
+    ports:
+      - "5000:5000"
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    environment:
+      VITE_API_BASE: http://localhost:8080
+      VITE_ML_BASE: http://localhost:5000
+    depends_on:
+      - backend
+      - ml-service
+    ports:
+      - "3000:80"
