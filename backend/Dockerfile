@@ -12,6 +12,6 @@ RUN npm install --omit=dev
 COPY . .
 
 # 4. CRITICAL: Must be 8080 to match Phase 3 and Ingress requirements
-EXPOSE 8080
+EXPOSE 800
 
 CMD ["npm", "start"]
