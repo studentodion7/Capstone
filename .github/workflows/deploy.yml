@@ -33,7 +33,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t $ECR_REPOSITORY:${{ github.sha }} .
+          docker build -t $ECR_REPOSITORY:${{ github.sha }} ./backend
           docker tag $ECR_REPOSITORY:${{ github.sha }} 307946680662.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:${{ github.sha }}
 
       - name: Push Docker Image
