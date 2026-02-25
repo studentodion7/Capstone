@@ -229,12 +229,11 @@ Platform Overview
 Backend Health
 
 Logs & Traces Correlation
-
 ```
 
 ```
 ### SLIs & SLOs:
-
+```
 Request success rate
 
 P95 latency < 300ms
@@ -243,8 +242,9 @@ P95 latency < 300ms
 ```
 
 ```
-### Security Controls
-
+```
+### Security Controls:
+```
 Private worker nodes
 
 No public SSH
@@ -260,12 +260,11 @@ Encrypted EBS volumes
 Least-privilege IAM roles
 
 Policy-as-code validation
-
 ```
-
+```
 ```
 ### Backup & Restore
-
+```
 Automated daily PostgreSQL backups via CronJob.
 
 Manual restore: 
