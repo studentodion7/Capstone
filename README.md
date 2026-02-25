@@ -22,7 +22,7 @@
   </a>
  </a>
   <a href="GITHUB ACTIONS">
-    <img src="https://camo.githubusercontent.com/06f584f1dc87b8507a753da6eabff04f82cf0d13fc5dafbbb3dccec329272695/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4157532532304543522d6f72616e67653f7374796c653d666f722d7468652d6261646765" />
+    <img src="https://camo.githubusercontent.com/b86f746cc4e2b26828a7616b18c9619c096494e2abe9ac68ce80affc39eece4c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f474954485542253230414354494f4e532d77686974653f7374796c653d666f722d7468652d6261646765" />
   </a>
 </p>
 
@@ -49,9 +49,6 @@ The application enables users to browse products through a dynamic React fronten
 8. 🔐 Security Controls  
 9. 🛠 Backup & Restore  
 10. 📌 Rollback Procedure  
-11. 🚧 Known Limitations  
-12. 🖼 Architecture Diagram  
-13. 📄 License  
 
 ---
 
@@ -190,13 +187,13 @@ Implemented using Python/Flask. Provides recommendation responses to the backend
 
 ---
 
----
-```##Containerization
+
+**Containerization**
 
 All services are containerized using Docker with optimized Dockerfiles. Local development and testing are orchestrated via Docker Compose to replicate service interactions before cluster deployment.
 
-##Kubernetes Platform Controls
-```
+**Kubernetes Platform Controls**
+
 The deployment includes:
 
 - Namespace isolation
@@ -211,7 +208,7 @@ The deployment includes:
 
 - NetworkPolicies for least-privilege communication
 
-###Observability Stack
+**Observability Stack**
 
 The platform integrates a full observability layer using:
 
@@ -223,13 +220,13 @@ The platform integrates a full observability layer using:
 
 - Grafana dashboards and alerting
 
-###Infrastructure as Code & Automation
+**Infrastructure as Code & Automation**
 
 Infrastructure is defined using modular Terraform architecture (network, compute, data, security layers).
 Configuration management is handled via Ansible roles.
 CI/CD pipelines automate linting, testing, image builds, infrastructure validation, policy-as-code checks, and deployment workflows.
 
-###AWS Infrastructure
+**AWS Infrastructure**
 
 **Networking (AWS VPC)**
 - A dedicated VPC across two Availability Zones (AZs).
