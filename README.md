@@ -257,7 +257,6 @@ Least-privilege IAM roles
 Policy-as-code validation
 
 
-```
 ### Backup & Restore
 
 Automated daily PostgreSQL backups via CronJob.
