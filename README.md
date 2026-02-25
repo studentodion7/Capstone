@@ -319,7 +319,7 @@ terraform apply
 - This will create a VPC, subnets (2 public, 2 private), an Internet Gateway, a NAT Gateway, and route tables. You can verify the networking setup from AWS console > VPC > Resource Map.
 
 <p align="center">
-  <img src="assets/VPC creation.png" width="900"/>
+  <img src="assets/VPC-creation.png" width="900"/>
 </p>
 
 - This will deploy an EKS cluster (shopmicro-dev), EKS node groups, Application Load Balancer controller, Metrics server, and Cluster autoscaler.
@@ -330,13 +330,13 @@ terraform apply
 aws eks update-kubeconfig --region us-west-2 --name shopmicro-dev
 ```
 <p align="center">
-  <img src="assets/eks config.png" width="900"/>
+  <img src="assets/eks-config.png" width="900"/>
 </p>
 
 - Next, ensure that nodes, Application Load Balancer controller, Metrics server, and Cluster autoscaler are installed properly.
 
 <p align="center">
-  <img src="assets/nodes installation.png" width="900"/>
+  <img src="assets/nodes-installation.png" width="900"/>
 </p>
 
 ### Step 4: CI/CD with GitHub Actions
@@ -383,13 +383,13 @@ aws eks update-kubeconfig --region us-west-2 --name shopmicro-dev
 </p>
 
 <p align="center">
-  <img src="assets/describe ingress.png" width="900"/>
+  <img src="assets/describe-ingress.png" width="900"/>
 </p>
 
 - Verify the server via port forwarding
 
 <p align="center">
-  <img src="assets/port forward.png" width="900"/>
+  <img src="assets/port-forward.png" width="900"/>
 </p>
 
 <p align="center">
