@@ -1,7 +1,7 @@
 # 🛒 ShopMicro Production Platform
 
-[![CI/CD](https://img.shields.io/badge/CI--CD-passing-brightgreen)](https://github.com/your-repo/actions)  
-[![Docker](https://img.shields.io/badge/Docker-ready-blue)](https://hub.docker.com/repository/docker/yourrepo/shopmicro)  
+[![CI/CD](https://img.shields.io/badge/CI--CD-passing-brightgreen)](https://github.com/https://github.com/studentodion7/Capstone.git/actions)  
+[![Docker](https://img.shields.io/badge/Docker-ready-blue)](https://hub.docker.com/repository/docker/https://github.com/studentodion7/Capstone.git/shopmicro)  
 [![Terraform](https://img.shields.io/badge/Terraform-ready-blueviolet)](https://www.terraform.io/)  
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
