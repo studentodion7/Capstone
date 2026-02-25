@@ -161,12 +161,13 @@ Terraform provisions:
 <p align="center">
   <img src="assets/component-diagram.png" width="900"/>
 </p>
+
 ---
 
 ## ☁ Deployment Setup
-```
-```
-## Deployment Diagram
+
+
+### Deployment Diagram
 
 <p align="center">
   <img src="assets/deployment-diagram.png" width="900"/>
