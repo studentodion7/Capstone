@@ -211,7 +211,6 @@ kubectl get pods -n shopmicro
 kubectl get ingress -n shopmicro
 kubectl get hpa -n shopmicro
 kubectl get pvc -n shopmicro
-
 ```
 ### Observability
 
@@ -236,7 +235,7 @@ Request success rate
 P95 latency < 300ms
 
 99% success rate over 7 days
-```
+
 
 ```
 ### Security Controls
@@ -256,7 +255,7 @@ Encrypted EBS volumes
 Least-privilege IAM roles
 
 Policy-as-code validation
-```
+
 
 ```
 ### Backup & Restore
