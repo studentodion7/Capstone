@@ -16,11 +16,6 @@
 </p>
 
 ---
-## 🖼 Component Diagram
-
-<p align="center">
-  <img src="assets/component-diagram.png" width="900"/>
-</p> 
 
 ---
 
@@ -163,7 +158,17 @@ Terraform provisions:
 
 ## Component Diagram
 
+<p align="center">
+  <img src="assets/component-diagram.png" width="900"/>
+</p>
 ---
+## ☁ Deployment Setup
+
+## Deployment Diagram
+
+<p align="center">
+  <img src="assets/deployment-diagram.png" width="900"/>
+</p>
 
 ## 🚀 How to Run Locally
 
