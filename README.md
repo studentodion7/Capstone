@@ -219,21 +219,18 @@ Access Grafana:
 
 ```
 kubectl port-forward svc/monitoring-grafana 3000:80 -n monitoring
-
-
 ```
-### Dashboards:
+### Dashboards
 
 Platform Overview
 
 Backend Health
 
 Logs & Traces Correlation
-
 ```
 
 ```
-### SLIs & SLOs:
+### SLIs & SLOs
 
 Request success rate
 
@@ -260,7 +257,6 @@ Encrypted EBS volumes
 Least-privilege IAM roles
 
 Policy-as-code validation
-
 ```
 
 ```
@@ -275,8 +271,9 @@ kubectl exec -it <postgres-pod> -n shopmicro -- bash
 psql -U postgres shopmicro < backup.sql
 ```
 
+``
 ### Rollback Procedure
-```
+
 kubectl rollout history deployment/backend -n shopmicro
 kubectl rollout undo deployment/backend -n shopmicro
 kubectl rollout status deployment/backend -n shopmicro
