@@ -45,9 +45,8 @@ The application enables users to browse products through a dynamic React fronten
 4. 🚀 How to Run Locally  
 5. ☁️ How to Deploy to AWS  
 6. 🧪 Verification & Testing  
-7. 🔐 Security Controls  
-8. 🛠 Backup & Restore  
-9. 📌 Rollback Procedure  
+7. 🛠 Backup & Restore  
+8. 📌 Rollback Procedure  
 
 ---
 
