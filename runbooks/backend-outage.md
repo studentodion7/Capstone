@@ -8,7 +8,7 @@ Backend pod enters CrashLoopBackOff state.
 ## Detection
 
 - Alert triggered: HighErrorRate
-- Grafana dashboard shows spike in 5xx errors
+- Grafana dashboard shows spike errors
 - Users report failed API requests
 
 ---
@@ -52,14 +52,6 @@ Test endpoint:
 curl http://<ingress-host>/health
 
 ---
-
-## Postmortem
-
-### Root Cause
-(e.g., broken Docker image, missing env variable)
-
-### Impact
-(Users experienced 5xx errors for 12 minutes)
 
 ### Preventive Measures
 - Add pre-deployment smoke test
