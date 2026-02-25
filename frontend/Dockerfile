@@ -1,4 +1,4 @@
-# ---------- Build Stage ----------
+
 FROM node:20-alpine AS build
 
 WORKDIR /app
@@ -9,12 +9,12 @@ RUN npm ci
 COPY . .
 RUN npm run build
 RUN ls -l /app/dist
-# ---------- Production Stage ----------
+
 FROM nginx:alpine
 
 COPY --from=build /app/dist /usr/share/nginx/html
 
-EXPOSE 0
+EXPOSE 3000
 
 CMD ["nginx", "-g", "daemon off;"]
 
