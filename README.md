@@ -217,8 +217,9 @@ kubectl get pvc -n shopmicro
 
 Access Grafana:
 
-kubectl port-forward svc/monitoring-grafana 3000:80 -n monitoring
 ```
+kubectl port-forward svc/monitoring-grafana 3000:80 -n monitoring
+
 
 ```
 ### Dashboards:
@@ -228,6 +229,7 @@ Platform Overview
 Backend Health
 
 Logs & Traces Correlation
+
 ```
 
 ```
@@ -238,7 +240,6 @@ Request success rate
 P95 latency < 300ms
 
 99% success rate over 7 days
-
 ```
 
 ```
@@ -275,11 +276,10 @@ psql -U postgres shopmicro < backup.sql
 ```
 
 ### Rollback Procedure
-
+```
 kubectl rollout history deployment/backend -n shopmicro
 kubectl rollout undo deployment/backend -n shopmicro
 kubectl rollout status deployment/backend -n shopmicro
-
 ```
 
 
