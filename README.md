@@ -38,17 +38,16 @@ The application enables users to browse products through a dynamic React fronten
 ---
 
 ## 📑 Table of Contents
-
-1. 🧠 About  
-2. 📁 Project Tree  
-3. ⚙️ Prerequisites  
-4. ☁️ Deployment Setup  
-5. 🚀 How to Run Locally  
-6. ☁️ How to Deploy to AWS  
-7. 🧪 Verification & Testing  
-8. 🔐 Security Controls  
-9. 🛠 Backup & Restore  
-10. 📌 Rollback Procedure  
+  
+1. 📁 Project Tree  
+2. ⚙️ Prerequisites  
+3. ☁️ Deployment Setup  
+4. 🚀 How to Run Locally  
+5. ☁️ How to Deploy to AWS  
+6. 🧪 Verification & Testing  
+7. 🔐 Security Controls  
+8. 🛠 Backup & Restore  
+9. 📌 Rollback Procedure  
 
 ---
 
