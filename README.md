@@ -1,8 +1,8 @@
 # 🛒 ShopMicro Production Platform
 
 <p align="left">
-  <a href="https://github.com/studentodion7/Capstone/actions">
-    <img src="https://img.shields.io/badge/CI--CD-Automated-success" />
+  <a href="https://React.js">
+    <img src="https://camo.githubusercontent.com/42b06d21df73c7c8033ce0cc6e9dd5004e54179464904382edbc2788d9f421f4/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742e6a732d6461726b626c75653f7374796c653d666f722d7468652d6261646765" />
   </a>
   <a href="https://hub.docker.com/">
     <img src="https://camo.githubusercontent.com/e6969908cf1fa3b794d0d39f6fc730487498fa0b9868aeca3469bb0de5dc1dbc/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f646f636b65722d626c75653f7374796c653d666f722d7468652d6261646765" />
@@ -10,8 +10,19 @@
   <a href="https://developer.hashicorp.com/terraform/docs">
     <img src="https://camo.githubusercontent.com/b317a44c0dcc1b004afe6fba35988589c2dba7c087152a257207ec260cbf0dd7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7465727261666f726d2d707572706c653f7374796c653d666f722d7468652d6261646765" />
   </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-green" />
+  <a href="Kubernetes">
+    <img src="https://camo.githubusercontent.com/349d6e304af0093809ae1dec8dae2a16b0f11203a00085757c5695fa8f69d235/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6b756265726e657465732d736b79626c75653f7374796c653d666f722d7468652d6261646765" />
+  </a>
+  <a href="AWS EKS">
+    <img src="https://camo.githubusercontent.com/1c90f90dd1cdfaaf50b9580aaaee4e986cbfdc817c0a6d7560a301321cb79f20/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f415753253230454b532d746f6d61746f3f7374796c653d666f722d7468652d6261646765" />
+  </a>
+ </a>
+  <a href="AWS ECR">
+    <img src="https://camo.githubusercontent.com/06f584f1dc87b8507a753da6eabff04f82cf0d13fc5dafbbb3dccec329272695/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4157532532304543522d6f72616e67653f7374796c653d666f722d7468652d6261646765" />
+  </a>
+ </a>
+  <a href="GITHUB ACTIONS">
+    <img src="https://camo.githubusercontent.com/06f584f1dc87b8507a753da6eabff04f82cf0d13fc5dafbbb3dccec329272695/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4157532532304543522d6f72616e67653f7374796c653d666f722d7468652d6261646765" />
   </a>
 </p>
 
@@ -179,12 +190,13 @@ Implemented using Python/Flask. Provides recommendation responses to the backend
 
 ---
 
-###Containerization
+---
+```##Containerization
 
 All services are containerized using Docker with optimized Dockerfiles. Local development and testing are orchestrated via Docker Compose to replicate service interactions before cluster deployment.
 
-###Kubernetes Platform Controls
-
+##Kubernetes Platform Controls
+```
 The deployment includes:
 
 - Namespace isolation
