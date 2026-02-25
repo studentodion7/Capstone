@@ -132,8 +132,6 @@ Capstone/
 
 ## ☁️ Deployment Setup
 
-Terraform provisions:
-
 - **Microservices Architecture:** 
 ShopMicro is built using independently containerized services for the Frontend (React), Backend API (Node.js/Express), and ML Recommendation Service (Python/Flask). Each service runs as its own Kubernetes deployment, enabling independent scaling, rolling updates, and fault isolation.  
 - **Service Communication:**
@@ -181,11 +179,11 @@ Implemented using Python/Flask. Provides recommendation responses to the backend
 
 ---
 
-**Containerization**
+###Containerization
 
 All services are containerized using Docker with optimized Dockerfiles. Local development and testing are orchestrated via Docker Compose to replicate service interactions before cluster deployment.
 
-**Kubernetes Platform Controls:**
+###Kubernetes Platform Controls
 
 The deployment includes:
 
@@ -201,7 +199,7 @@ The deployment includes:
 
 - NetworkPolicies for least-privilege communication
 
-**Observability Stack:**
+###Observability Stack
 
 The platform integrates a full observability layer using:
 
@@ -213,15 +211,15 @@ The platform integrates a full observability layer using:
 
 - Grafana dashboards and alerting
 
-**Infrastructure as Code & Automation:**
+###Infrastructure as Code & Automation
 
 Infrastructure is defined using modular Terraform architecture (network, compute, data, security layers).
 Configuration management is handled via Ansible roles.
 CI/CD pipelines automate linting, testing, image builds, infrastructure validation, policy-as-code checks, and deployment workflows.
 
-**AWS Infrastructure**
+###AWS Infrastructure
 
-**Networking (AWS VPC)
+**Networking (AWS VPC)**
 - A dedicated VPC across two Availability Zones (AZs).
 
 - Subnets:
@@ -236,7 +234,7 @@ CI/CD pipelines automate linting, testing, image builds, infrastructure validati
   - Public route table routes internet-bound traffic via Internet Gateway.
   - Private route table routes internet-bound traffic via NAT Gateway.
 
-**Kubernetes Cluster (AWS EKS)
+**Kubernetes Cluster (AWS EKS)**
 - **EKS Cluster** deployed within the above VPC.
 - **EKS Node Group (managed worker nodes)** spread across the two AZs for high availability. Worker nodes are deployed in private subnets, ensuring they are not exposed directly to the internet.
 - **Application Load Balancer controller** is installed within the EKS cluster, to let traffic route using ingress.
@@ -248,14 +246,14 @@ Horizontal Pod AutoScaler (HPA) is a Kubernetes resource that automatically scal
 
 Cluster Autoscaler (CA) is a Kubernetes component that automatically adjusts the number of worker nodes in the cluster. If HPA scales up pods but no nodes have enough resources to run them, CA adds new nodes. If nodes are scaled down, it removes nodes to save cost.
 
-**Terraform (Infrastructure as Code)**
+###Terraform (Infrastructure as Code)
 - Infrastructure provisioned using Terraform, ensuring reproducibility and automation.
 - Terraform manage:
   - VPC (subnets, Internet Gateway, NAT Gateway, route tables).
   - EKS Cluster (Control Plane, Managed Node Groups, Access Entry, Metrics-server, Application Load Balancer Controller, Cluster Autoscaler).
   - ECR Repositories for storing Docker images.
 
-**CI/CD with GitHub Actions**
+###CI/CD with GitHub Actions
 - Separate workflow files per service for isolation and independent deployments.
 
 - Workflow stages:
@@ -286,7 +284,7 @@ docker build -t shopmicro/ml-service ./ml-service
 
 ## ☁️ How to Deploy to Amazon EKS
 
-**Prerequistics**
+##Prerequistics
 
 Make sure you have the following tools installed locally:
 
@@ -296,16 +294,16 @@ Make sure you have the following tools installed locally:
 - ekctl
 - Terraform
 
-**Step 1: Containerization**
+###Step 1: Containerization
 - Each component (frontend, service-registry, api-gateway, and microservices) has its own Dockerfile. 
 - You don’t need to change anything here. The components will be automatically built and push images to Amazon ECR when running CI/CD.   
 
 
-**Step 2: Kubernetes Orchestration**
+###Step 2: Kubernetes Orchestration
 
 - Each service is deployed as a separate Helm chart under /helm-charts directory. 
 
-**Step 3: AWS Infrastructure**
+###Step 3: AWS Infrastructure
 - AWS resources are provisioned using Terraform manifests in the terraform/ directory. 
 - By default, you can’t directly access an eks cluster without the AmazonEKSClusterAdminPolicy.
 - Then, run the following commands:
@@ -379,7 +377,7 @@ aws eks update-kubeconfig --region us-west-2 --name shopmicro-dev
 - Ingress
 
 <p align="center">
-  <img src="assets/ingress.png" width="900"/>
+  <img src="assets/ingress2.png" width="900"/>
 </p>
 
 <p align="center">
