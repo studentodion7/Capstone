@@ -1,13 +1,26 @@
 # 🛒 ShopMicro Production Platform
 
-[![CI/CD](https://img.shields.io/badge/CI--CD-passing-brightgreen)](https://github.com/https://github.com/studentodion7/Capstone.git/actions)  
-[![Docker](https://img.shields.io/badge/Docker-ready-blue)](https://hub.docker.com/repository/docker/https://github.com/studentodion7/Capstone.git/shopmicro)  
-[![Terraform](https://img.shields.io/badge/Terraform-ready-blueviolet)](https://www.terraform.io/)  
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+<p align="left">
+  <a href="https://github.com/studentodion7/Capstone/actions">
+    <img src="https://img.shields.io/badge/CI--CD-Automated-success" />
+  </a>
+  <a href="https://hub.docker.com/">
+    <img src="https://img.shields.io/badge/Docker-Ready-blue" />
+  </a>
+  <a href="https://developer.hashicorp.com/terraform/docs">
+    <img src="https://img.shields.io/badge/IaC-Terraform-blueviolet" />
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green" />
+  </a>
+</p>
 
 ---
-## 
-[![Component Diagram](assets/component-diagram.png)]
+## 🖼 Component Diagram
+
+<p align="center">
+  <img src="assets/component-diagram.png" width="900"/>
+</p> 
 
 ---
 
@@ -54,6 +67,8 @@ Deployed on **AWS (EKS)**.
 ---
 
 ## 📁 Project Tree
+
+```bash
 Capstone/
 ├── .github/
 │   └── workflows/
@@ -120,8 +135,7 @@ Capstone/
 ├── assets/
 │
 └── docker-compose.yml
-
-
+```
 
 ---
 
@@ -158,35 +172,39 @@ Terraform provisions:
 ```bash
 git clone https://github.com/your-repo/shopmicro.git
 cd shopmicro
+```
 
 2. Build Docker images:
 
-```
+```bash
 docker build -t shopmicro/frontend ./frontend
 docker build -t shopmicro/backend ./backend
 docker build -t shopmicro/ml-service ./ml-service
+```
 
 3. Deploy locally with minikube or kind.
+---
 
-How to Deploy to AWS
-Step 1: Deploy Infrastructure
+## ☁️ How to Deploy to AWS
 
-```
+### Step 1: Deploy Infrastructure
+
+```bash
 cd infrastructure/terraform/environments/dev
 terraform init
 terraform apply
-
-Step 2: Connect to EKS
+```
+### Step 2: Connect to EKS
 
 ```
 aws eks update-kubeconfig --region us-east-1 --name shopmicro-dev
-
-Step 3: Deploy Kubernetes Resources
+```
+### Step 3: Deploy Kubernetes Resources
 
 ```
 kubectl apply -f k8s/
-
-Verification & Testing
+```
+### Verification & Testing
 
 ```
 kubectl get pods -n shopmicro
@@ -195,23 +213,25 @@ kubectl get hpa -n shopmicro
 kubectl get pvc -n shopmicro
 
 ```
-Observability
+### Observability
 
 Access Grafana:
 
-```
 kubectl port-forward svc/monitoring-grafana 3000:80 -n monitoring
+```
 
 ```
-Dashboards:
+### Dashboards:
 
 Platform Overview
 
 Backend Health
 
 Logs & Traces Correlation
+```
 
-SLIs & SLOs:
+```
+### SLIs & SLOs:
 
 Request success rate
 
@@ -221,7 +241,8 @@ P95 latency < 300ms
 
 ```
 
-Security Controls
+```
+### Security Controls
 
 Private worker nodes
 
@@ -240,19 +261,20 @@ Least-privilege IAM roles
 Policy-as-code validation
 
 ```
-Backup & Restore
+
+```
+### Backup & Restore
 
 Automated daily PostgreSQL backups via CronJob.
 
 Manual restore: 
 
 ```
-
 kubectl exec -it <postgres-pod> -n shopmicro -- bash
 psql -U postgres shopmicro < backup.sql
-
 ```
-Rollback Procedure
+
+### Rollback Procedure
 
 kubectl rollout history deployment/backend -n shopmicro
 kubectl rollout undo deployment/backend -n shopmicro
